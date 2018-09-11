@@ -8,14 +8,13 @@ import { ItemService } from '../../item.service';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-
-  items: Item[];
+  items: Array<Item>
 
  	constructor(private itemService: ItemService) { }
   	ngOnInit() {
   		this.itemService
-      		.getItems() 
-      		.subscribe(data => {
+      		.getItems()
+      		.subscribe((data: Array<Item>) => {
         		this.items = data;
         });
     }

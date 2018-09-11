@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ItemService {
-  const apiBaseUrl = '//localhost:4000'
+  apiBaseUrl = '//localhost:4000'
 
   constructor(private http: HttpClient) { }
 
